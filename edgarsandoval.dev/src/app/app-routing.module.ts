@@ -8,21 +8,35 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'inicio',
     pathMatch: 'full'
   },
+
   {
-    path: 'proyectos',
-    loadChildren: () => import('./proyectos/proyectos.module').then( m => m.ProyectosPageModule)
+    path: 'inicio',
+    loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
   },
+
   {
-    path: 'mi-experiencia',
-    loadChildren: () => import('./mi-experiencia/mi-experiencia.module').then( m => m.MiExperienciaPageModule)
+    path: 'edgar-sandoval',
+    loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
   },
+
   {
     path: 'galeria',
-    loadChildren: () => import('./galeria/galeria.module').then( m => m.GaleriaPageModule)
+    loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
   },
+
+  {
+    path: 'proyectos',
+    loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
+  },
+
+  {
+    path: 'servicios',
+    loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
+  },
+  
 ];
 
 @NgModule({
